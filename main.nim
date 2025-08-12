@@ -29,7 +29,8 @@ else:
   echo fmt"C:/Users/{user_name}/AppData/Roaming/{engine_or_factory}/{name}"
   echo fmt"C:/Users/{user_name}/AppData/Local/{engine_or_factory}/{name}"
   echo fmt"C:/ProgramData/{engine_or_factory}/{name}"
-  echo fmt"C:/Users/{user_name}/Documents/{engine_or_factory}/{name}"
+  if engine_or_factory == "minori":
+    echo fmt"C:/Users/{user_name}/Documents/{engine_or_factory}/{name}"
   if engine_or_factory == "tyranobuilder":
     echo fmt"C:/Users/{user_name}/AppData/Local/tyranoscript/Local Stotage"
     echo fmt"C:/Users/{user_name}/AppData/Roaming/tyranogame"
