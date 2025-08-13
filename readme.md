@@ -7,3 +7,7 @@ install_libs.cmd
 ```
 build.cmd
 ```
+## 一共有三个版本
+1. main.nim nim语言版
+2. index.html html语言版
+3. main.cpp c++语言版
