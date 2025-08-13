@@ -7,11 +7,12 @@ install_libs.cmd
 ```
 build.cmd
 ```
-## 一共有4个版本
+## 一共有5个版本
 1. main.nim nim语言版
 2. index.html html语言版
 3. main.cpp c++语言版
 4. main.java java语言版
+5. main.py python语言版
 
 ## java版使用
 1. 找到main.class
