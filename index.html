@@ -12,50 +12,39 @@
     <input type="text" placeholder="请输入游戏引擎/厂商名称，如果未知请直接回车">
     <button onclick="gen()">生成路径</button>
     <script>
+        function createP(textContent)
+        {
+            const newElement = document.createElement("p")
+            newElement.textContent = textContent
+            document.body.appendChild(newElement)
+        }
     function gen()
     {
         const allInputs = document.getElementsByTagName("input")
         const user_name = allInputs.item(0).value
         const name = allInputs.item(1).value
         const engine_or_factory = allInputs.item(2).value
-        const tip = document.createElement("p")
-        tip.textContent = "可能的路径有："
-        document.body.appendChild(tip)
+        createP("可能的路径有：")
         if(engine_or_factory == "")
         {
-            const newElement = document.createElement("p")
-            newElement.textContent = `C:/Users/${user_name}/AppData/Roaming/${name}`
-            document.body.appendChild(newElement)
-            const newElement2 = document.createElement("p")
-            newElement2.textContent = `C:/Users/${user_name}/AppData/Local/${name}`
-            document.body.appendChild(newElement2)
+            createP(`C:/Users/${user_name}/AppData/Roaming/${name}`)
+            createP(`C:/Users/${user_name}/AppData/Local/${name}`)
         }
         else{
-            const newElement3 = document.createElement("p")
-            newElement3.textContent = `C:/Users/${user_name}/AppData/Roaming/${engine_or_factory}/${name}`
-            document.body.appendChild(newElement3)
-            const newElement4 = document.createElement("p")
-            newElement4.textContent = `C:/Users/${user_name}/AppData/Local/${engine_or_factory}/${name}`
-            document.body.appendChild(newElement4)
-            const newElement5 = document.createElement("p")
-            newElement5.textContent = `C:/ProgramData/${engine_or_factory}/${name}`
-            document.body.appendChild(newElement5)
+            createP(`C:/Users/${user_name}/AppData/Roaming/${engine_or_factory}/${name}`)
+            createP(`C:/Users/${user_name}/AppData/Local/${engine_or_factory}/${name}`)
+            createP(`C:/ProgramData/${engine_or_factory}/${name}`)
             if(engine_or_factory == "minori")
             {
-                const newElement6 = document.createElement("p")
-                newElement6.textContent = `C:/Users/${user_name}/Documents/${engine_or_factory}/${name}`
-                document.body.appendChild(newElement6)
+                createP(`C:/Users/${user_name}/Documents/${engine_or_factory}/${name}`)
             }
             if(engine_or_factory == "tyranobuilder")
             {
-                const newElement7 = document.createElement("p")
-                newElement7.textContent = `C:/Users/${user_name}/AppData/Local/tyranoscript/Local Stotage`
-                document.body.appendChild(newElement7)
-                const newElement8 = document.createElement("p")
-                newElement8.textContent = `C:/Users/${user_name}/AppData/Roaming/tyranogame`
-                document.body.appendChild(newElement8)
+                createP(`C:/Users/${user_name}/AppData/Local/tyranoscript/Local Stotage`)
+                createP(`C:/Users/${user_name}/AppData/Roaming/tyranogame`)
             }
         }
+
     }</script>
 </body>
 </html>
