@@ -34,12 +34,19 @@ int main()
         std::cout << "C:/ProgramData/" + engine_or_factory + "/" + name << std::endl;
         if(engine_or_factory == "minori")
         {
-            std::cout << "C:/Users/" + user_name + "/Documents/minori/" + name;
+            std::cout << "C:/Users/" + user_name + "/Documents/minori/" + name << std::endl;
         }
-        if(engine_or_factory == "tyranobuilder")
+        else if(engine_or_factory == "tyranobuilder")
         {
-            std::cout << "C:/Users/" + user_name + "/AppData/Local/tyranoscript/Local Stotage";
-            std::cout << "C:/Users/" + user_name + "/AppData/Roaming/tyranogame";
+            std::cout << "C:/Users/" + user_name + "/AppData/Local/tyranoscript/Local Stotage" << std::endl;
+            std::cout << "C:/Users/" + user_name + "/AppData/Roaming/tyranogame" << std::endl;
+        }
+        else if(engine_or_factory == "unity")
+        {
+            std::cout << "请输入公司名字" << std::endl;
+            std::string company;
+            std::getline(std::cin, company);
+            std::cout << "C:/Users/" + user_name + "/AppData/LocalLow/" + company + "/" + name << std::endl;
         }
     }
     return 0;
