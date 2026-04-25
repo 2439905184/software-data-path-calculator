@@ -41,6 +41,10 @@ int main()
             std::cout << "C:/Users/" + user_name + "/AppData/Local/tyranoscript/Local Stotage" << std::endl;
             std::cout << "C:/Users/" + user_name + "/AppData/Roaming/tyranogame" << std::endl;
         }
+        else if(engine_or_factory == "godot")
+        {
+            std::cout << "C:/Users/" + user_name + "/AppData/Roaming/Godot/app_userdata/" + name << std::endl;
+        }
         else if(engine_or_factory == "unity")
         {
             std::cout << "请输入公司名字" << std::endl;

@@ -34,6 +34,8 @@ else:
   elif engine_or_factory == "tyranobuilder":
     echo fmt"C:/Users/{user_name}/AppData/Local/tyranoscript/Local Stotage"
     echo fmt"C:/Users/{user_name}/AppData/Roaming/tyranogame"
+  elif engine_or_factory == "godot":
+    echo fmt"C:/Users/{user_name}/AppData/Roaming/Godot/app_userdata/{name}"
   elif engine_or_factory == "unity":
     echo "请输入公司名字"
     var company = stdin.readLine()
